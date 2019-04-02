@@ -26,6 +26,7 @@
 
 
 .circle1, .circle2 {
+    margin-top: 60px;
     border-radius: 50%;
 }
 .circle1{
@@ -36,7 +37,7 @@
     width: 200px;
 }
 .circle2{
-    margin-top: 50%;
+    margin-top: 50px;
     height: 150px;
     width: 150px;
     background-color: white;

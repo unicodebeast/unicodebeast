@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Drinks</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -22,13 +22,22 @@
             </div>
         </header>
         <section class="section">
-            <div class="titles">
+        <div class="titles">
                 <h1 font-face="simplicity">KwasuDelight Drinks</h1>
                 <h3>Choose your prefered Drinks</h3>
             </div>
             <div class="background">
-                <img class="main-drink" src="IMAGES/i11.png" alt="drink">
+                <img class="main-drink" width="70%" src="IMAGES/in4.png" alt="drink">
             </div>
+            <div class="background">
+                <div class="Varieties">
+                        <a href="foods.php"><img src="IMAGES/i6.png" alt="food" class="images"></a>
+                        <a href="barbique.php"><img src="IMAGES/i3.png" alt="food" class="images"></a>
+                        <a href="drinks.php"><img src="IMAGES/i9.png" alt="food" class="images"></a>
+                        <a href="pasteries.php"><img src="IMAGES/i12.png" alt="food" class="images"></a>
+                </div>
+                </div>
+            </div>            
         </section>
     <footer class="footer"> &COPY; KWASU GROUP 17</footer>
 </div>

@@ -26,10 +26,11 @@
                 <img width="407px" height="154px" src="Other Files/logo1.png" alt="" class="compname">
                 <img class="image" src="IMAGES/top.png" alt="FoodImg">
                 <div class="Varieties">
-                        <img src="IMAGES/i6.png" alt="food" class="images">
-                        <img src="IMAGES/i3.png" alt="food" class="images">
+                        <a href="foods.php"><img src="IMAGES/i6.png" alt="food" class="images"></a>
+                        <a href="barbique.php"><img src="IMAGES/i3.png" alt="food" class="images"></a>
                         <a href="drinks.php"><img src="IMAGES/i9.png" alt="food" class="images"></a>
-                        <img src="IMAGES/i12.png" alt="food" class="images">
+                        <a href="pasteries.php"><img src="IMAGES/i12.png" alt="food" class="images"></a>
+                </div>
                 </div>
             </div>            
         </section>

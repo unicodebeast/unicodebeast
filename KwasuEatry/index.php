@@ -4,23 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>KWASU EATERY</title>
-    <link rel="stylesheet" href="main.css">
-</head>
+  </head>
 <body>
     <div class="container">
-        <header class="header">
-            <div class="logo"><img class="logoimg" width="130px" height="70px" src="Other Files/logo.png" alt="">
-            <h4>KwasuDelight</h4>
-            </div>
-            <div class="nav-items">
-                <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">SERVICES</a></li>
-                    <li><a href="#">CONTACT US</a></li>
-                </ul>
-            </div>
-        </header>
+       <?php
+       require_once 'header.php';
+       ?>
         <section class="section">
             <div class="background">
                 <img width="407px" height="154px" src="Other Files/logo1.png" alt="" class="compname">
@@ -34,10 +23,9 @@
                 </div>
             </div>            
         </section>
-        <footer class="footer"> &COPY; KWASU GROUP 17</footer>
+      <?php
+      require_once 'footer.php';
+      ?>
     </div>
 </body>
 </html>
-
-
-<!-- JAVASCRIPT CODES -->

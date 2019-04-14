@@ -2,6 +2,7 @@
     width: 100%;
 }
 .header, footer {
+    padding: 10px;
     display: flex;
     justify-content: center;
     height: 100px;
@@ -166,15 +167,60 @@ h5{
     font-weight: bold;
     background-color: bisque;
 }
+.block{
+    margin: 0 auto;
+    background-color: yellow;
+    
+    align-self: center;
+}
+.imgs{
+    background-color: burlywood;
+    display: block;
+    text-align: center;
+    padding: 20px;
+}
+.l-1, .l-2 {
+   display: inline-block;   
+}
+.bgland1{
+    /* margin-top: 200px; */
+    display:flex;
+    margin: 50px;
+    margin-bottom: 0px;
+}
+.bgland{
+    flex:3;
+}
+.login{
+    justify-content: center;
+    align-self: center;
+    margin:0 auto;
+    flex:1;
+}
 .log-info > form > input {
     display: block;
+    width: 300px;
+    height: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 5px 5px 5px brown;
+}
+.logfooter{
+    height: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background-color:burlywood;
 }
 /* HOVER CLASSES */
+@keyframes hover{
+    from{ color: white;}
+    50% {color: bisque;}
+    to {color: brown;}
+}
 a:hover{
-    color: bisque;
-    text-decoration: underline;
-    font-style: italic;
-
+    animation-name: hover;
+    animation-duration: 2s;
 }
 a:active {
     color: brown;
@@ -182,4 +228,19 @@ a:active {
 .images:hover{
     height: 100px;
     width: 100px;
+}
+
+@keyframes back{
+    0%,100% { background-color: wheat;}
+    25% { background-color: rgb(250, 231, 127);}
+    50% { background-color: blanchedalmond;}
+    75% { background-color: rgba(235, 231, 28, 0.76);}
+}
+
+.block {
+    background-color: wheat;
+    animation-name: back;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+
 }

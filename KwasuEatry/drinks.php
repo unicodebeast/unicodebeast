@@ -7,32 +7,35 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-<div class="container">
 <?php
+    $checkedDrinks = $_POST['checked'];
+    $drinkQty = $_POST['qty'];
+    $submit = $_POST['submit'];
 
-if (isset($_POST['checked'])) {
-    foreach ($_POST['checked'] as $drink => $key) {
-        echo $_POST[$key].'<br>';
+    $price = array(['COCACOLA' => 100, 'PEPSI' => 100, 'BIGI APPLE' => 150, 'BIGI COLA' => 150,
+        'SPRITE' => 120, 'CWAY NUTRI MILK' => 150, 'SMOOVE' => 100, 'NUTRI YO' => 200,
+        'LACASERA' => 100, 'MIRINDA' => 100, ]);
+
+    function getItems($item, $qty, $priceArr)
+    {
+        function priceByKey($array, $key)
+        {
+            foreach ($array as $iPrice) {
+                return $iPrice[$key];
+            }
+        }
+
+        $result = '';
+        for ($i = 0; $i < count($item); ++$i) {
+            $result .= '<h6> You have requested '.$qty[$i].' '.$item[$i].' and it costs  N'
+            .(priceByKey($priceArr, $item[$i]) * $qty[$i]).'</h6>';
+        }
+
+        return $result;
     }
-}
-$checkedDrinks = $_POST['checked'];
-$drinkQty = $_POST['qty'];
-
-function getItems($item, $qty)
-{
-    $result;
-    for ($i = 0; $i < count($checkedDrinks); ++$i) {
-        $result.'<h3> you requested '.$qty[$i].' Plastics of '.$item[$i].'</h3> <br>';
-    }
-
-    return $result;
-}
-// if (isset($checkedDrinks) && isset($drinkQty)) {
-//     foreach ($checkedDrinks as $n) {
-//         echo $n;
-//     }
-// }
-?>
+    ?>
+    
+<div class="container">
         <?php
         require_once 'header.php';
         ?>
@@ -46,7 +49,7 @@ function getItems($item, $qty)
             </div>            
             <div class="shelf">
                 <div class="column-1">
-                    <form action="" method="post">
+                    <form action="drinks.php" method="post">
                         <table>
                         <div class="items">
                         <table class="table">
@@ -60,79 +63,88 @@ function getItems($item, $qty)
 
                             <tr class="t-row">
                                     <td class="item">COCACOLA</td>
-                                    <td class="checkbox"><input type="checkbox" name="checked[cocacola]" value="COCACOLA" class="checkBox">    </td>
+                                    <td class="checkbox"><input type="checkbox" name="checked[]" value="COCACOLA" class="checkBox">    </td>
                                     <td class="price"> 100 </td>   
-                                    <td class="quantity"><input type="number" name="qty['cocacola']" id=""></td>
+                                    <td class="quantity"><input type="number" min ="1" max= "5" value="1" name="qty[]" id=""></td>
                             </tr>
                             <tr class="t-row">
                                     <td class="item">PEPSI</td>
-                                    <td class="checkbox"><input type="checkbox" name="checked[pepsi]" value="PEPSI" class="checkBox">    </td>
+                                    <td class="checkbox"><input type="checkbox" name="checked[]" value="PEPSI" class="checkBox">    </td>
                                     <td class="price"> 100 </td>   
-                                    <td class="quantity"><input type="number" name="qty['pepsi']" id=""></td>
+                                    <td class="quantity"><input type="number" min ="1" max= "5" value="1" name="qty[]" id=""></td>
                             </tr>
                             <tr class="t-row">
                                     <td class="item">MIRINDA</td>
-                                    <td class="checkbox"><input type="checkbox" name="checked['mirinda']" value="MIRINDA" class="checkBox">    </td>
+                                    <td class="checkbox"><input type="checkbox" name="checked[]" value="MIRINDA" class="checkBox">    </td>
                                     <td class="price"> 100 </td>   
-                                    <td class="quantity"><input type="number" name="qty['mirinda']" id=""></td>
+                                    <td class="quantity"><input type="number" min ="1" max= "5" value="1" name="qty[]" id=""></td>
                             </tr>
                             <tr class="t-row">
                                     <td class="item">BIGI APPLE</td>
-                                    <td class="checkbox"><input type="checkbox" name="checked['big_apple']" value="BIGI APPLE" class="checkBox">    </td>
+                                    <td class="checkbox"><input type="checkbox" name="checked[]" value="BIGI APPLE" class="checkBox">    </td>
                                     <td class="price"> 150 </td>   
-                                    <td class="quantity"><input type="number" name="qty['big_apple']" id=""></td>
+                                    <td class="quantity"><input type="number" name="qty[]" id=""></td>
                             </tr>
                             <tr class="t-row">
                                     <td class="item">BIGI COLA</td>
-                                    <td class="checkbox"><input type="checkbox" name="checked['bigi_cola']" value="BIGI COLA" class="checkBox">    </td>
+                                    <td class="checkbox"><input type="checkbox" name="checked[]" value="BIGI COLA" class="checkBox">    </td>
                                     <td class="price"> 150 </td>   
-                                    <td class="quantity"><input type="number" name="qty['bigi_cola']" id=""></td>
+                                    <td class="quantity"><input type="number" name="qty[]" id=""></td>
                             </tr>
                             <tr class="t-row">
                                     <td class="item">SPRITE</td>
-                                    <td class="checkbox"><input type="checkbox" name="checked['sprite']" value="SPRITE" class="checkBox">    </td>
+                                    <td class="checkbox"><input type="checkbox" name="checked[]" value="SPRITE" class="checkBox">    </td>
                                     <td class="price"> 120 </td>   
-                                    <td class="quantity"><input type="number" name="qty['sprite']" id=""></td>
+                                    <td class="quantity"><input type="number" name="qty[]" id=""></td>
                             </tr>
                             <tr class="t-row">
                                     <td class="item">CWAY NUTRI MILK</td>
-                                    <td class="checkbox"><input type="checkbox" name="checked['cway']" value="CWAY NUTRI MILK" class="checkBox">    </td>
+                                    <td class="checkbox"><input type="checkbox" name="checked[]" value="CWAY NUTRI MILK" class="checkBox">    </td>
                                     <td class="price"> 150 </td>   
-                                    <td class="quantity"><input type="number" name="qty['cway']" id=""></td>
+                                    <td class="quantity"><input type="number" name="qty[]" id=""></td>
                             </tr>
                             <tr class="t-row">
                                     <td class="item">SMOOVE</td>
-                                    <td class="checkbox"><input type="checkbox" name="checked['smoove']" value="SMOOVE" class="checkBox">    </td>
+                                    <td class="checkbox"><input type="checkbox" name="checked[]" value="SMOOVE" class="checkBox">    </td>
                                     <td class="price"> 100 </td>   
-                                    <td class="quantity"><input type="number" name="qty['smoove']" id=""></td>
+                                    <td class="quantity"><input type="number" name="qty[]" id=""></td>
                             </tr>
                             <tr class="t-row">
                                     <td class="item">NUTRI YO</td>
-                                    <td class="checkbox"><input type="checkbox" name="checked['nutri_yo']" value="NUTRI YO" class="checkBox">    </td>
+                                    <td class="checkbox"><input type="checkbox" name="checked[]" value="NUTRI YO" class="checkBox">    </td>
                                     <td class="price"> 200 </td>   
-                                    <td class="quantity"><input type="number" name="qty['nutri_yo']" id=""></td>
+                                    <td class="quantity"><input type="number" name="qty[]" id=""></td>
                             </tr>
                             <tr class="t-row">
                                     <td class="item">LACASERA</td>
-                                    <td class="checkbox"><input type="checkbox" name="checked['lacasera']" value="LACASERA" class="checkBox">    </td>
+                                    <td class="checkbox"><input type="checkbox" name="checked[]" value="LACASERA" class="checkBox">    </td>
                                     <td class="price"> 100 </td>   
-                                    <td class="quantity"><input type="number" name="qty['lacasera']" id=""></td>
+                                    <td class="quantity"><input type="number" name="qty[]" id=""></td>
                             </tr>
 
                         </table>
-                        <input type="submit" value="submit">
+                       <button type="submit" name="submit">Submit</button>
                     </form>
                 </div>
-                <div class="column-2">
+                <div class="cart-column">
                     <div class="cart">
-                        <h3>Items requested for</h3>
-                       <?php echo '<h3>'.$purchedItem.'</h3>'; ?>
+                        <?php
+                            if (!isset($checkedDrinks)) {
+                                echo '<h3> Cart is Empty </h3>';
+                            } else {
+                                echo '<h3>Items requested for</h3>';
+                            }
+                                if (isset($submit)) {
+                                    echo getItems($checkedDrinks, $drinkQty, $price);
+                                }
+                            ?>
                     </div>
                 </div>
             </div>
                
             
             <div class="background">
+            <h3>Kindly Pick from the list of categories bellow what you would love to purchase</h3>
                 <div class="Varieties">
                     <a href="foods.php"><img src="IMAGES/i6.png" alt="food" class="images"></a>
                     <a href="barbique.php"><img src="IMAGES/i3.png" alt="food" class="images"></a>

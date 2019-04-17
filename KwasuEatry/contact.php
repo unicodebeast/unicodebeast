@@ -15,24 +15,32 @@
         <div class="background">
             <h1>CONTACT US</h1>
             <h3>kindly fill out the form bellow to get intouch with us via email</h3>
-            <form action="" class="contact">
+            <form action="contact.php" metod="post" class="contact">
                 <div class="groups">
                     <div class="column-1">
-                        <h2>Office Address</h2>
+                        <h3>Office Address</h3>
                         <p>No 17 Kwasu Street, <br> Malete Ilorin, Kwara State </p>
                     </div>
                     <div class="column-2">
                             Enter Name:
-                            <input type="text" name="Name" id="" class="con-input" required>
+                            <input type="text" name="name" id="" class="con-input" required>
                             Enter Email:
                             <input type="email" name="" id="" class="con-input" required>
                             Enter Phone No:
                             <input type="tel" name="" id="" class="con-input" required>
+                            <button type="submit" name="submit">Submit</button>
                             
                     </div>
                     <div class="column-3">
-                            Enter Your Comment
-                            <input type="textarea" name="" class="comment"id="" required>
+                            Enter Your Comment:
+                            <textarea name="" id="" cols="50" rows="12" required></textarea>
+                            <?php
+                            $name = $_POST['name'];
+                            $submit = $_POST['submit'];
+
+                            if (isset($name)) {
+                                echo "<h3> Dear $name, your Request has been Submitted </h3>";
+                            } ?>
                     </div>
                 </div>
             </form>

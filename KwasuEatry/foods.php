@@ -23,6 +23,7 @@
             </div>
                 
             <div class="background">
+            <h3>Kindly Pick from the list of categories bellow what you would love to purchase</h3>
                 <div class="Varieties">
                     <a href="foods.php"><img src="IMAGES/i6.png" alt="food" class="images"></a>
                     <a href="barbique.php"><img src="IMAGES/i3.png" alt="food" class="images"></a>

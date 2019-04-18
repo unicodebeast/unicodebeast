@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Foods</title>
+    <title>Pasteries</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -13,19 +13,19 @@
         ?>
         <section class="section">
             <div class="titles">
-                    <h1 font-face="simplicity">KwasuDelight Foods</h1>
-                    <h3>What would you like to eat</h3>
+                    <h1 font-face="simplicity">KwasuDelight Barbique</h1>
+                    <h3>would you prefer Fish Barbique of Meat Barbique</h3>
             </div>
             <div class="background">
-                <img class="main-drink" width="50%" src="IMAGES/r2.png" alt="drink">
+                <img class="main-drink" width="50%" src="IMAGES/in7.png" alt="drink">
             </div>
             <div class="items">
             </div>
                 
             <div class="background">
-            <h3>AT THE MOMENT, KWASUDELIGHT IS UNDER MAINTANANCE AND THEREBY NO MEAL IS AVAILABLE. 
+            <h3>AT THE MOMENT, KWASUDELIGHT IS UNDER MAINTANANCE AND THEREBY NO PASTERIES ARE AVAILABLE. 
                 KINDLY NAVIGATE TO DRINKS CATEGORY TO HAVE SOME REFRESHMENT. SORRY ABOUT THE INCONVINIENCES. 
-                KwasDelight Cares</h3>
+                KwasDelight Cares!!!</h3>
             <h3>Kindly Pick from the list of categories bellow what you would love to purchase</h3>
                 <div class="Varieties">
                     <a href="foods.php"><img src="IMAGES/i6.png" alt="food" class="images"></a>

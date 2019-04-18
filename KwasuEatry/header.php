@@ -15,14 +15,14 @@
             </div>
             <div class="nav-items">
                 <ul>
-                    <li><a href="index.php">HOME</a></li>
+                    <li><a href="home.php">HOME</a></li>
                     <li><a href="about.php">ABOUT</a></li>
                     <li><a href="services.php">SERVICES</a></li>
                     <li><a href="contact.php">CONTACT US</a></li>
                 </ul>
             </div>
             <div class="log-button">
-                <a href="login.php"><input type="button" value="Login"></a>
+                <a href="login.php"><input type="button" value="Logout"></a>
             </div>
         </header>
 </body>

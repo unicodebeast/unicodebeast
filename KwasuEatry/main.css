@@ -108,6 +108,7 @@ li > a{
     box-shadow: 3px 3px 5px burlywood;
 }
 .cart{
+    flex:9;
     margin: 0;
     padding: 5px;
 }
@@ -170,12 +171,18 @@ h5{
     flex-direction: row;
     height: 300px;
 }
-.cart-column{
- padding: 0;
- margin: 0;
- flex:1;
- border: solid;
- border-color:brown;   
+.pay{
+    margin: 0 auto;
+    flex:0.5;
+}
+.cart-column {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    flex:1;
+    border: solid;
+    border-color:brown;   
 }
 .column-1, .column-2, .column-3{
     text-align: center;
@@ -204,7 +211,7 @@ h5{
     margin: 0 auto;
 }
 .column-1,.column-2{
-    flex: 2;
+    flex: 1;
 }
 .t-data, .item{
     width:600px;
@@ -222,6 +229,13 @@ h5{
     text-align: center;
     font-weight: bold;
 }
+
+.cart-column {
+    margin-top: 0;
+    padding: 0;
+    flex: 0.6;
+}
+
 .item{
     font-weight: bold;
     background-color: bisque;
@@ -328,8 +342,31 @@ p > a{
     padding: 5px;
     text-align: center;
     color: burlywood;
-    font: 14pt bold;
-    
+    font: 14pt bold;    
+}
+.output{
+    background-color: gold;
+    padding: 7px;
+    margin: 10px;
+    font-weight:bold;
+    font-size: 10pt;
+}
+.totalPrice{
+    padding: 7px;
+    margin: 5px;
+    background-color: brown;
+    color: wheat;
+    font-weight: bolder;
+    text-align: center;
+}
+.motto{
+    z-index: 10;
+    text-shadow: 2px 2px 2px brown;
+    color:black;
+    font-weight: bold;
+    align-self: center;
+    position: absolute;
+    margin-top: 140px;
 }
 /* HOVER CLASSES */
 @keyframes hover{
@@ -361,5 +398,21 @@ a:active {
     animation-name: back;
     animation-duration: 6s;
     animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22)
 
+}
+
+@keyframes dash{
+    0%{ opacity: 1;}
+    100%{ opacity: 0;}
+    
+}
+.dashboard{
+    animation-name: dash;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-duration: 3s;
 }

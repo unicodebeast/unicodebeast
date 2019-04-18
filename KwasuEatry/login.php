@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>login</title>
+    <link rel="stylesheet" href="normalize.min.css">
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -20,7 +21,7 @@
                     </div>
                     <div class="login">
                         <div class="log-info">
-                            <form action="index.php" method="post">
+                            <form action="home.php" method="post">
                                 FULL NAME:<input type="text" name="fullName" id="" required>
                                 EMAIL:<input type="email" name="Email" id="" required>
                                 MATRIC NO:<input type="text" name="Matric Number" id="" required>

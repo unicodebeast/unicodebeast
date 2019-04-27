@@ -48,7 +48,9 @@
     </div>
     <?php
     require_once 'footer.php';
-    ?>
+printf('Ola');
+sprintf('Bosunmi');
+?>
     </div>
 </body>
 </html>
